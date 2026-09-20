@@ -15,6 +15,8 @@ body {
     align-items: center;
 
     padding: 20px;
+
+    transition: background 0.5s ease;
 }
 
 .container {
@@ -26,10 +28,12 @@ body {
 
     border: 1px solid #444;
 
-    box-shadow:
-        0 0 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 
     padding: 45px;
+
+    transition: border-color 0.5s ease,
+                box-shadow 0.5s ease;
 }
 
 .tela {
@@ -41,7 +45,9 @@ body {
 }
 
 
-/* INÍCIO */
+/* =========================================
+   TELA INICIAL
+========================================= */
 
 #inicio {
     text-align: center;
@@ -52,6 +58,8 @@ body {
     font-size: 65px;
     margin-bottom: 25px;
     color: #d9d9d9;
+
+    transition: color 0.5s ease;
 }
 
 #inicio h1 {
@@ -76,7 +84,9 @@ body {
 }
 
 
-/* BOTÕES */
+/* =========================================
+   BOTÕES
+========================================= */
 
 button {
     margin-top: 35px;
@@ -109,7 +119,9 @@ button:disabled {
 }
 
 
-/* QUIZ */
+/* =========================================
+   QUIZ
+========================================= */
 
 .topo {
     display: flex;
@@ -148,7 +160,9 @@ button:disabled {
 }
 
 
-/* ALTERNATIVAS */
+/* =========================================
+   ALTERNATIVAS
+========================================= */
 
 .alternativa {
     width: 100%;
@@ -182,14 +196,18 @@ button:disabled {
 }
 
 
-/* BOTÃO PRÓXIMA */
+/* =========================================
+   BOTÃO PRÓXIMA
+========================================= */
 
 .botao-proxima {
     width: 100%;
 }
 
 
-/* RESULTADO */
+/* =========================================
+   RESULTADO
+========================================= */
 
 #resultado {
     text-align: center;
@@ -204,12 +222,16 @@ button:disabled {
 .resultado-simbolo {
     margin-top: 25px;
     margin-bottom: 5px;
+
+    transition: color 0.5s ease;
 }
 
 #nomeFacao {
     font-size: 48px;
     letter-spacing: 5px;
     margin-bottom: 25px;
+
+    transition: color 0.5s ease;
 }
 
 #descricaoFacao {
@@ -220,7 +242,9 @@ button:disabled {
 }
 
 
-/* PONTUAÇÃO */
+/* =========================================
+   PONTUAÇÃO
+========================================= */
 
 .pontuacao {
     margin-top: 45px;
@@ -230,6 +254,10 @@ button:disabled {
     background: #242424;
 
     padding: 25px;
+
+    border-left: 4px solid #444;
+
+    transition: border-color 0.5s ease;
 }
 
 .pontuacao h3 {
@@ -245,10 +273,95 @@ button:disabled {
     border-bottom: 1px solid #444;
 
     color: #ccc;
+
+    transition: border-color 0.5s ease;
+}
+
+.linha-pontuacao:last-child {
+    border-bottom: none;
 }
 
 
-/* RESPONSIVO */
+/* =========================================
+   CORES DAS FACÇÕES
+========================================= */
+
+/* AUDÁCIA - PRETO */
+
+.resultado-audacia {
+    color: #000000 !important;
+}
+
+.container.facção-audacia {
+    border-color: #000000;
+}
+
+
+/* ERUDIÇÃO - AZUL */
+
+.resultado-erudicao {
+    color: #1976d2 !important;
+}
+
+.container.facção-erudicao {
+    border-color: #1976d2;
+
+    box-shadow:
+        0 0 30px rgba(25, 118, 210, 0.20);
+}
+
+
+/* ABNEGAÇÃO - CINZA */
+
+.resultado-abnegacao {
+    color: #bdbdbd !important;
+}
+
+.container.facção-abnegacao {
+    border-color: #9e9e9e;
+}
+
+
+/* AMIZADE - AMARELO */
+
+.resultado-amizade {
+    color: #d4a72c !important;
+}
+
+.container.facção-amizade {
+    border-color: #d4a72c;
+
+    box-shadow:
+        0 0 30px rgba(212, 167, 44, 0.15);
+}
+
+
+/* FRANQUEZA - BRANCO */
+
+.resultado-franqueza {
+    color: #ffffff !important;
+}
+
+.container.facção-franqueza {
+    border-color: #ffffff;
+}
+
+
+/* =========================================
+   BOTÃO DO RESULTADO
+========================================= */
+
+#resultado button {
+    transition:
+        background 0.3s,
+        color 0.3s,
+        border 0.3s;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
 
 @media (max-width: 600px) {
 
@@ -267,5 +380,9 @@ button:disabled {
 
     #nomeFacao {
         font-size: 35px;
+    }
+
+    .linha-pontuacao {
+        font-size: 15px;
     }
 }
