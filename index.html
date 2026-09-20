@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Especialista - Divergente</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TELA INICIAL -->
+        <section id="inicio" class="tela ativa">
+            <div class="simbolo">◈</div>
+
+            <h1>DIVERGENTE</h1>
+            <h2>Sistema Especialista</h2>
+
+            <p>
+                Descubra qual das cinco facções representa melhor
+                suas características e escolhas.
+            </p>
+
+            <button onclick="iniciarQuiz()">INICIAR TESTE</button>
+        </section>
+
+
+        <!-- QUIZ -->
+        <section id="quiz" class="tela">
+
+            <div class="topo">
+                <span id="numeroPergunta">Pergunta 1 de 15</span>
+                <span id="porcentagem">7%</span>
+            </div>
+
+            <div class="barra-container">
+                <div id="barraProgresso"></div>
+            </div>
+
+            <h2 id="pergunta"></h2>
+
+            <div id="alternativas"></div>
+
+            <button id="botaoProxima"
+                    class="botao-proxima"
+                    onclick="proximaPergunta()"
+                    disabled>
+                PRÓXIMA
+            </button>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section id="resultado" class="tela">
+
+            <p class="resultado-label">SUA FACÇÃO É</p>
+
+            <div id="simboloResultado" class="simbolo resultado-simbolo">
+                ◈
+            </div>
+
+            <h1 id="nomeFacao"></h1>
+
+            <p id="descricaoFacao"></p>
+
+            <div class="pontuacao">
+                <h3>Classificação</h3>
+
+                <div id="pontuacoes"></div>
+            </div>
+
+            <button onclick="reiniciarQuiz()">FAZER O TESTE NOVAMENTE</button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
